@@ -37,3 +37,26 @@ Dashboard: Tableau will be used to display our findings. We envision that we wil
 3. What is the model's accuracy?
 - After running the test data, our model achieved an accuracy score of 1. 
 
+## PostgreSQL
+
+**This segment shows a PostgreSQL database housing a cleaned dataset showcasing information about TV shows and movies on the popular streaming service: Netflix.**
+
+**The image below shows the "netflix_table" in the "netflix_db" database:**
+
+![image1](resources/image1.png?raw=true "Title")
+
+**The image below shows the "ratings_table" in the "netflix_db" database:**
+
+![image2](resources/image2.png?raw=true "Title")
+
+The schema for this PostgreSQL database can be viewed in this repository as "netflix_ERD.sql" file. 
+
+![image4](resources/image4.PNG?raw=true "Title")
+
+The datasets were cleaned and merged in Pandas to create a working dataframe and then a PostgreSQL connection string was connected to our "netflix_db" database. Upon establishing a connection, the dataframes were exported to PostgreSQL to be made as tables.
+
+The following dependencies were used to aid in the PostgreSQL integration from Jupyter Notebook:
+
+
+![image3](resources/image3.PNG?raw=true "Title")
+
