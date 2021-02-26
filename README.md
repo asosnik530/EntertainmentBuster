@@ -17,10 +17,10 @@ We hope to identify whether a show or movie will become popular in the future? I
 Our team will communicate via slack. We have also discussed the times that work best for us if we need to connect additionally outside of class hours.
 
 ## Technologies Used
-Data Cleaning and Analysis: We will utilize SQL and Python to conduct preliminary data cleaning and analysis. SQL will allow us to join tables to show relationships between viewing data and movie/tv data. For example, we could look at the number of viewers in comparison to a certain genre amongst the select programs we look at. Python will be utilized to clean the data and conduct analyses. 
-Database Storage: We will utilize Jupyter Notebook to maintain our database. The libraries we will utilize include Pandas, HVPlot, Path, Plotly,Matplotlib, Tensorflow, Sklear, Json, Numpy, Re, SQLalchemy, Config, and Time. 
-Machine Learning: We will utilize Python to develop our supervised machine learning model to predict, based on past viewing trends for certain genres, which shows of said genres will be popular in the future. 
-Dashboard: Tableau will be used to display our findings. We envision that we will have charts displaying the popularity of shows in comparison to key viewer demographics such as age and gender. 
+ - Data Cleaning and Analysis: We will utilize Python to conduct preliminary data cleaning and analysis. SQL will allow us to join tables to calculate ratings averages across genres. 
+ - Database Storage: We will utilize Jupyter Notebook to maintain our database. The libraries we will utilize include Pandas, HVPlot, Path, Plotly,Matplotlib, Tensorflow, Sklear, Json, Numpy, Re, SQLalchemy, Config, and Time. 
+ - Machine Learning: We will utilize Python to develop our supervised machine learning model to predict, based on past viewing trends for certain genres, which shows of said genres will be popular in the future. 
+ - Dashboard: Several software will be used to display our findings. We envision that we will have charts displaying the popularity of shows in comparison to key viewer demographics such as age and gender. 
 
 # EntertainmentBusters
 
