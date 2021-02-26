@@ -22,11 +22,10 @@ Our team will communicate via slack. We have also discussed the times that work 
  - Machine Learning: We will utilize Python to develop our supervised machine learning model to predict, based on past viewing trends for certain genres, which shows of said genres will be popular in the future. 
  - Dashboard: Several software will be used to display our findings. We envision that we will have charts displaying the popularity of shows in comparison to key viewer demographics such as age and gender. 
 
-# EntertainmentBusters
 
 ## Machine Learning Model: Logistic Regression
 
-<p align="center"><img src="https://github.com/asosnik530/EntertainmentBuster/blob/triangle_seg_1/Images/Machine%20Learning%20Model%20Diagram.png?raw=true" height = "500" width="700"></p>
+![image1](resources/ml_diagram.png?raw=true "Title")
 
 1. Which model did you choose and why?
 - We will be using the supervised learning logistic regression classification model, which will help us determine which Netflix TV shows and movies will be likely to grow in popularity. This model predicts binary outcomes based on multiple variables; therefore, it is a perfect fit for our dataset. We will be predicting the binary outcome of whether or not the Netflix program is likely to have positive growth based on multiple variables like IMDb ratings, genre, release years, country, content rating, and date added. 
