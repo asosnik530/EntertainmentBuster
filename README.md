@@ -1,7 +1,7 @@
 # EntertainmentBuster
 
 ## Selected topic:
-Which TV shows and Movies will have the most growth in the future?
+Which Netflix TV shows and Movies will have the most growth in the future?
 
 ## Why we selected this topic:
 Our group noticed that we all have increased our use of Netflix over the past few years. As we discussed shows that suddenly became popular on Netflix, we started to ask what shows/movies would become the next hit? As a group, we thought it would be interesting to try and identify what show or movie would have the most growth in the future.
