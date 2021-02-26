@@ -49,15 +49,20 @@ Dashboard: Tableau will be used to display our findings. We envision that we wil
 
 ![image2](resources/image2.png?raw=true "Title")
 
-The following image shows the ERD for this PostgreSQL database: 
+The schema for this PostgreSQL database can be viewed in this repository as "netflix_ERD.sql" file. 
 
-
-![image4](resources/image4.png?raw=true "Title")
 
 
 The datasets were cleaned and merged in Pandas to create a working dataframe and then a PostgreSQL connection string was connected to our "netflix_db" database. Upon establishing a connection, the dataframes were exported to PostgreSQL to be made as tables.
 
 The following dependencies were used to aid in the PostgreSQL integration from Jupyter Notebook:
+
+!pip install psycopg2
+import re
+
+from sqlalchemy import create_engine
+from config import db_password
+import time
 
 
 ![image3](resources/image3.png?raw=true "Title")
