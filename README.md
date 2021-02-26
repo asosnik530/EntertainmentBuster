@@ -65,5 +65,5 @@ from config import db_password
 import time
 
 
-![image3](resources/image3.png?raw=true "Title")
+![image3](resources/image3.PNG?raw=true "Title")
 
