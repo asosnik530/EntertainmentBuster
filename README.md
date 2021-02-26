@@ -50,12 +50,11 @@ Our team will communicate via slack. We have also discussed the times that work 
 
 The schema for this PostgreSQL database can be viewed in this repository as "netflix_ERD.sql" file. 
 
-![image4](resources/image4.PNG?raw=true "Title")
+![image3](resources/image3.PNG?raw=true "Title")
 
 The datasets were cleaned and merged in Pandas to create a working dataframe and then a PostgreSQL connection string was connected to our "netflix_db" database. Upon establishing a connection, the dataframes were exported to PostgreSQL to be made as tables.
 
 The following dependencies were used to aid in the PostgreSQL integration from Jupyter Notebook:
 
-
-![image3](resources/image3.PNG?raw=true "Title")
+![image4](resources/image4.PNG?raw=true "Title")
 
