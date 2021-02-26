@@ -22,3 +22,18 @@ Database Storage: We will utilize Jupyter Notebook to maintain our database. The
 Machine Learning: We will utilize Python to develop our supervised machine learning model to predict, based on past viewing trends for certain genres, which shows of said genres will be popular in the future. 
 Dashboard: Tableau will be used to display our findings. We envision that we will have charts displaying the popularity of shows in comparison to key viewer demographics such as age and gender. 
 
+# EntertainmentBusters
+
+## Machine Learning Model: Logistic Regression
+
+<p align="center"><img src="https://github.com/asosnik530/EntertainmentBuster/blob/triangle_seg_1/Images/Machine%20Learning%20Model%20Diagram.png?raw=true" height = "500" width="700"></p>
+
+1. Which model did you choose and why?
+- We will be using the supervised learning logistic regression classification model, which will help us determine which Netflix TV shows and movies will be likely to grow in popularity. This model predicts binary outcomes based on multiple variables; therefore, it is a perfect fit for our dataset. We will be predicting the binary outcome of whether or not the Netflix program is likely to have positive growth based on multiple variables like IMDb ratings, genre, release years, country, content rating, and date added. 
+
+2. How does this model work?
+- We will be setting up our model by splitting the dataset into training and test sets using train_test_split from Scikit-learn's model selection which takes X and y as arguments to split the data. Splitting the dataset allows us to train the model on a portion of our data and then set aside the remaining portion of the dataset to evaluate our model. Our features (X) will be the input variables 'country', 'date_added', 'release_year', 'rating', 'duration','description', 'IMDb', and 'Genre'. Our target (y) will be the "Growth Outcome" column that will have a '0' for no growth and '1' for positive growth. In setting up our splitting function, we will specify a random state of 1 to assign the same rows to train and test sets respectively that will ensure we can obtain the results again if necessary. Since there is likely a class imbalance, we will also stratify the dataset to divide it proportionally among each classification. We will end up with 4 sets in total: X_train, X_test, y_train, and y_test. After instantiating the classifier model, we will use the fit() method to train the model. Next we will create predictions to validate the model by using the predict() method based on X_test and creating a dataframe of predicted values and actual values. It is then important for us to assess the performance of our model by using accuracy score function on our new dataframe and y_test values that will tell us how well our model is predicting the data. 
+
+3. What is the model's accuracy?
+- After running the test data, our model achieved an accuracy score of 1. 
+
