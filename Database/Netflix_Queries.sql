@@ -48,7 +48,7 @@ SELECT * FROM movies;
 
 -- TV Shows that are (1) Horrible to Poor
 
-SELECT COUNT (release_year), Title
+SELECT COUNT (release_year), Title, IMDb
 INTO tv_shows_1
 FROM tv_shows as t
 LEFT JOIN ratings as r
@@ -60,7 +60,7 @@ ORDER BY release_year;
 
 -- TV Shows that are (2) Mediocre to Ok
 
-SELECT COUNT (release_year), Title
+SELECT COUNT (release_year), Title, IMDb
 INTO tv_shows_2
 FROM tv_shows as t
 LEFT JOIN ratings as r
@@ -72,7 +72,7 @@ ORDER BY release_year;
 
 -- TV Shows that are (3) Good to Excellent
 
-SELECT COUNT (release_year), Title
+SELECT COUNT (release_year), Title, IMDb
 INTO tv_shows_3
 FROM tv_shows as t
 LEFT JOIN ratings as r
@@ -83,7 +83,7 @@ ORDER BY release_year;
 
 -- Movies that are (1) Horrible to Poor
 
-SELECT COUNT (release_year), Title
+SELECT COUNT (release_year), Title, IMDb
 INTO movies_1
 FROM movies as m
 LEFT JOIN ratings as r
@@ -94,7 +94,7 @@ ORDER BY release_year;
 
 -- Movies that are (2) Mediocre to Ok
 
-SELECT COUNT (release_year), Title
+SELECT COUNT (release_year), Title, IMDb
 INTO movies_2
 FROM movies as m
 LEFT JOIN ratings as r
@@ -105,7 +105,7 @@ ORDER BY release_year;
 
 -- Movies that are (3) Good to Excellent
 
-SELECT COUNT (release_year), Title
+SELECT COUNT (release_year), Title, IMDb
 INTO movies_3
 FROM movies as m
 LEFT JOIN ratings as r
