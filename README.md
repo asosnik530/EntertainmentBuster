@@ -1,5 +1,15 @@
 # EntertainmentBuster
 
+## Segment 2 Role Breakdowns:
+Andie Sosnik: Circle
+Caroline O’Connell: Triangle
+Stacy Chandisingh: X
+Paromita De: Square
+
+## Google Slides Presentation:
+
+ - https://docs.google.com/presentation/d/1S1ZgQjKXm1rrYEpqQBf11-dbEdKso4bpcEN2l2_Oy-8/edit?usp=sharing
+
 ## Selected topic:
 Which Netflix TV shows and Movies will have the most growth in the future?
 
@@ -27,34 +37,35 @@ Our team will communicate via slack. We have also discussed the times that work 
 
 ![image1](resources/ml_diagram.png?raw=true "Title")
 
-1. Which model did you choose and why?
-- We will be using the supervised learning logistic regression classification model, which will help us determine which Netflix TV shows and movies will be likely to grow in popularity. This model predicts binary outcomes based on multiple variables; therefore, it is a perfect fit for our dataset. We will be predicting the binary outcome of whether or not the Netflix program is likely to have positive growth based on multiple variables like IMDb ratings, genre, release years, country, content rating, and date added. 
+ - How does it work (including steps for preprocessing): For our preprocessing, we first examined the available data. The data available to us included several csv files from Kaggle that contained information on Netflix tv shows and movies, such as title, date released, country that produced the program, IMDB ratings, and genre. The data was cleaned and joined the data to ensure that all listings were Netflix programs and had country names and IMDB ratings as part of their listings, plus other relevant information. Additionally, the data cleaning included modifying the country column (only including one country name for programs that originally listed multiple producing countries) and genre column (combining similar genres under a specific genre). For our machine learning model we imported the following dependencies to conduct our model: matplotlib, pandas, sklearn(train_test_split, LogisticRegression, accuracy_score, StandardScaler, OneHotEncoder), numpy, and path. We determined our independent variables to be genre, duration, IMDB rating, average rating per genre, release year, and producing country. Our dependent variable is the “Growth Outcome”, where ‘0’ equates to no growth and ‘1’ equates to positive growth. There were several steps to creating the initial Growth Outcome variable. First, we calculated the average rating for a program by genre. Then, once, we saw that the highest average rating was 7.41 for the ‘Crime’ genre, we decided to use 7.41 as a benchmark for growth in ratings. Finally, we calculated the Growth Outcome for each program, where any program that had an average rating equal to or greater than 7.41 received a mark of ‘1’ as a positive growth outcome, and any program receiving an average rating of less than 7.41 received a ‘0’ mark as no growth outcome. Further, we encoded the titles to give them a numerical value for our model. This completed our work on our initial data file to be run in our machine learning model. However, there was a concern about potential multicollinearity since the average genre ratings and genre were both independent variables. To reduce this potential multicollinearity, we calculated average ratings for producing country and release year as well. We then calculated a combined average rating from all of these ratings. We also dropped the average rating for genre from our independent variables. The lowest average combined rating for a listing was 5.33, and the highest average combined rating was 7.53. , We decided to use 6.5 as our new benchmark for the Growth Outcome. Our current machine learning model is based on this most recent modification, but we are still finetuning the model.  
 
-2. How does this model work?
-- We will be setting up our model by splitting the dataset into training and test sets using train_test_split from Scikit-learn's model selection which takes X and y as arguments to split the data. Splitting the dataset allows us to train the model on a portion of our data and then set aside the remaining portion of the dataset to evaluate our model. Our features (X) will be the input variables 'country', 'date_added', 'release_year', 'rating', 'duration','description', 'IMDb', and 'Genre'. Our target (y) will be the "Growth Outcome" column that will have a '0' for no growth and '1' for positive growth. In setting up our splitting function, we will specify a random state of 1 to assign the same rows to train and test sets respectively that will ensure we can obtain the results again if necessary. Since there is likely a class imbalance, we will also stratify the dataset to divide it proportionally among each classification. We will end up with 4 sets in total: X_train, X_test, y_train, and y_test. After instantiating the classifier model, we will use the fit() method to train the model. Next we will create predictions to validate the model by using the predict() method based on X_test and creating a dataframe of predicted values and actual values. It is then important for us to assess the performance of our model by using accuracy score function on our new dataframe and y_test values that will tell us how well our model is predicting the data. 
+ - Why this specific model? We considered the possibility that our machine learning model could be an unsupervised machine learning model, if our growth in ratings variable would be continuous and non-labeled. However, considering the way we further envisioned this growth variable (to be categorical), we decided to go with a supervised machine learning model using logistic regression. 
 
-3. What is the model's accuracy?
-- After running the test data, our model achieved an accuracy score of 1. 
+ - Accuracy: We instantiated our logistic regression supervised machine learning model with the following conditions:’solver = lbfgs, random_state = 1, max_iter = 200’. Training occurred with 2,918 listings and testing occurred with 5,720 listings. With out initial machine learning model with a Growth Outcome benchmark of 7.41, after training the model with 2,918 listings and testing the model with 5,720 listings, ort model’s accuracy score was calculated to be approximately  .998972. With the update to the Growth Outcome calculations we made, our model’s current accuracy score is approximately .854.
 
-## PostgreSQL
+ - How can this model be finetuned? This model could be finetuned in a number of ways. First, we could make the growth model more stringent by increasing the benchmark for a “positive growth” rating for the Growth Outcome. For example, would the model be more accurate if the benchmark was 7.5 instead of 7? Also, we could consider modifying the date added data. Given that Netflix viewing has undoubtedly increased in the past year due to COVID, we could see how the model fares with programs released before 2020 and programs released after 2020. Finally, we could also reconsider  which independent variables are included in the machine learning model based on seeing how the current model fares with other streaming programming such as Disney+ and Hulu. 
 
-**This segment shows a PostgreSQL database housing a cleaned dataset showcasing information about TV shows and movies on the popular streaming service: Netflix.**
 
-**The image below shows the "netflix_table" in the "netflix_db" database:**
+## Database
 
-![image1](resources/image1.png?raw=true "Title")
+ - A SQL database has been created using Pandas and Postgres with pgAdmin 4. Our database folder within the repo contains the files that created the database connection which stores our static data and connects to the model. Using SQL, 8 new tables were created from the 2 original csv files. These tables were created as a query to show a breakdown of Netflix TV shows and movies based on their ratings and release year. The tables were made using a left join. Each set of TV shows and movies were categorized into 3 subsets based on ratings and then sorted and grouped by release years. Below is an example of the 1st set of TV shows in category 1 and the categories were as follows: 
 
-**The image below shows the "ratings_table" in the "netflix_db" database:**
+1)Horrible to Poor: ratings between 0/10 to 3/10
+2)Mediocre to Ok: ratings between 4/10 to 6/10
+3)Good to Excellent: ratings between 7/10 to 10/10
 
-![image2](resources/image2.png?raw=true "Title")
+![image1](resources/tv_shows_1.png?raw=true "Title")
 
-The schema for this PostgreSQL database can be viewed in this repository as "netflix_ERD.sql" file. 
+ - The file named “Netflix_Queries.sql” shows the queries used in pgAdmin 4 to create all tables. After all tables were created, they were exported as csv files and saved in the “Data Files” folder for further analysis and visualizations. We also created a connection string using SQLAlchemy to run a query on popular titles based on ratings and genre. The file named “Netflix_Database_Connection.ibynb” shows a breakdown of the connection string. Below is a breakdown of our ERD relationships for our SQL database.
 
-![image3](resources/image3.PNG?raw=true "Title")
+![image1](resources/ERD_Relationships.png?raw=true "Title")
 
-The datasets were cleaned and merged in Pandas to create a working dataframe and then a PostgreSQL connection string was connected to our "netflix_db" database. Upon establishing a connection, the dataframes were exported to PostgreSQL to be made as tables.
+## Visualizations
 
-The following dependencies were used to aid in the PostgreSQL integration from Jupyter Notebook:
+ - Link to dashboard blueprint on google slides:  Entertainment_Buster_Dashboard_Blueprint:https://docs.google.com/presentation/d/1dMSXbWPZI7iQ7lK7niY1OKjWJ9ewC3vSaB6phdXrjt0/edit#slide=id.p
 
-![image4](resources/image4.PNG?raw=true "Title")
+ - Link to tableau dashboards with visualizations: 
+Public Dashboard #1
+Public Dashboard #2
+
 

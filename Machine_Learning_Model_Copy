@@ -1,0 +1,67 @@
+# Machine Learning Model: Logistic Regression
+
+# Import dependencies
+import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.preprocessing import StandardScaler,OneHotEncoder
+import sklearn as skl
+import numpy as np
+from path import Path
+Importing the data
+# Import the cleaned, combined CSV file and read it into a Pandas DataFrame
+data = Path('./titles_updated.csv')
+titles_df = pd.read_csv(data)
+titles_df
+
+# Drop the description column because it does not need to be encoded
+titles_df = titles_df.drop(['description'], axis = 1)
+titles_df
+
+# Generate our categorical variable list
+titles_cat = titles_df.dtypes[titles_df.dtypes == "object"].index.tolist()
+
+# Check the number of unique values in each column
+titles_df[titles_cat].nunique()
+
+# Create a OneHotEncoder instance
+enc = OneHotEncoder(sparse=False)
+
+# Fit and transform the OneHotEncoder using the categorical variable list
+encode_df = pd.DataFrame(enc.fit_transform(titles_df[titles_cat]))
+
+# Add the encoded variable names to the DataFrame
+encode_df.columns = enc.get_feature_names(titles_cat)
+encode_df
+
+# Merge one-hot encoded features and drop the originals
+titles_df = titles_df.merge(encode_df,left_index=True, right_index=True)
+titles_df = titles_df.drop(titles_cat,1)
+titles_df
+
+Setting up the model
+
+# Separate the Features(X) from the Target (y)
+y = titles_df["Growth Outcome"]
+X = titles_df.drop(columns = "Growth Outcome")
+
+# Split our data into training and testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1, stratify=y)
+X_train.shape
+
+# Create a Logistic Regression Model
+classifier = LogisticRegression(solver='lbfgs', random_state=1, max_iter=200)
+classifier
+
+# Fit(train) our model using the training data
+classifier.fit(X_train, y_train)
+
+# Predict outcomes for data set
+y_pred = classifier.predict(X_test)
+results = pd.DataFrame({"Prediction": y_pred, "Actual": y_test}).reset_index(drop=True)
+results.head(20)
+
+# Validate the model using the test data
+accuracy_score(y_test, y_pred)
