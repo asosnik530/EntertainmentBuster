@@ -65,7 +65,7 @@ Our team will communicate via slack. We have also discussed the times that work 
  - Link to dashboard blueprint on google slides:  Entertainment_Buster_Dashboard_Blueprint:https://docs.google.com/presentation/d/1dMSXbWPZI7iQ7lK7niY1OKjWJ9ewC3vSaB6phdXrjt0/edit#slide=id.p
 
  - Link to tableau dashboards with visualizations: 
-Public Dashboard #1
-Public Dashboard #2
+Public Dashboard #1: https://public.tableau.com/profile/stacy.chandisingh#!/vizhome/NetViz/EBStory?publish=yes
+Public Dashboard #2: https://public.tableau.com/profile/andie.sosnik#!/vizhome/EntertainmentBusterVisualizations/Story1?publish=yes
 
 
