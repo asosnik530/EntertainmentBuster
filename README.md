@@ -50,9 +50,9 @@ Our team will communicate via slack. We have also discussed the times that work 
 
  - A SQL database has been created using Pandas and Postgres with pgAdmin 4. Our database folder within the repo contains the files that created the database connection which stores our static data and connects to the model. Using SQL, 8 new tables were created from the 2 original csv files. These tables were created as a query to show a breakdown of Netflix TV shows and movies based on their ratings and release year. The tables were made using a left join. Each set of TV shows and movies were categorized into 3 subsets based on ratings and then sorted and grouped by release years. Below is an example of the 1st set of TV shows in category 1 and the categories were as follows: 
 
-1)Horrible to Poor: ratings between 0/10 to 3/10
-2)Mediocre to Ok: ratings between 4/10 to 6/10
-3)Good to Excellent: ratings between 7/10 to 10/10
+1. Horrible to Poor: ratings between 0/10 to 3/10
+2. Mediocre to Ok: ratings between 4/10 to 6/10
+3. Good to Excellent: ratings between 7/10 to 10/10
 
 ![image1](resources/tv_shows_1.png?raw=true "Title")
 
