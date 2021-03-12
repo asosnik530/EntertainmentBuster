@@ -1,10 +1,10 @@
 # EntertainmentBuster
 
 ## Segment 2 Role Breakdowns:
-Andie Sosnik: Circle
-Caroline O’Connell: Triangle
-Stacy Chandisingh: X
-Paromita De: Square
+- Andie Sosnik: Circle
+- Caroline O’Connell: Triangle
+- Stacy Chandisingh: X
+- Paromita De: Square
 
 ## Google Slides Presentation:
 
@@ -62,10 +62,11 @@ Our team will communicate via slack. We have also discussed the times that work 
 
 ## Visualizations
 
- - Link to dashboard blueprint on google slides:  Entertainment_Buster_Dashboard_Blueprint:https://docs.google.com/presentation/d/1dMSXbWPZI7iQ7lK7niY1OKjWJ9ewC3vSaB6phdXrjt0/edit#slide=id.p
+Link to dashboard blueprint on google slides: 
+- https://docs.google.com/presentation/d/1dMSXbWPZI7iQ7lK7niY1OKjWJ9ewC3vSaB6phdXrjt0/edit#slide=id.p
 
- - Link to tableau dashboards with visualizations: 
-Public Dashboard #1: https://public.tableau.com/profile/stacy.chandisingh#!/vizhome/NetViz/EBStory?publish=yes
-Public Dashboard #2: https://public.tableau.com/profile/andie.sosnik#!/vizhome/EntertainmentBusterVisualizations/Story1?publish=yes
+Link to tableau dashboards with visualizations: 
+- Public Dashboard #1: https://public.tableau.com/profile/stacy.chandisingh#!/vizhome/NetViz/EBStory?publish=yes
+- Public Dashboard #2: https://public.tableau.com/profile/andie.sosnik#!/vizhome/EntertainmentBusterVisualizations/Story1?publish=yes
 
 
