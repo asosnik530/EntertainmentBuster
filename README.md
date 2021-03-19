@@ -1,10 +1,11 @@
 # EntertainmentBuster
 
-## Segment 2 Role Breakdowns:
-- Andie Sosnik: Circle
-- Caroline O’Connell: Triangle
-- Stacy Chandisingh: X
-- Paromita De: Square
+##Segment 3 Role Breakdowns:**
+Andie Sosnik: Triangle
+Caroline O’Connell: X
+Stacy Chandisingh: Circle
+Paromita De: Square
+
 
 ## Google Slides Presentation:
 
