@@ -49,7 +49,7 @@ Our team will communicate via slack. We have also discussed the times that work 
 
  - Updates on Changes in Our Model (from Segment 2 to Segment 3): To further validate the model, we tested the model on a trial dataset five additional Netflix programs from different genres: “Bridgerton”, “Queer Eye”, “Extraction”, “Molly’s Game”, and “Emily in Paris”. The purpose of this validation was to see if what would our model would predict to have “positive growth” or “no growth”. The model predicted all programs except “Extraction” and “Emily in Paris” to have “positive growth”. 
 
-![image1](resources/table_1.png?raw=true “Title”)
+![image1](resources/table_1.png?raw=true "Title")
 
 https://media.giphy.com/media/E4Y1RuHzeZD3IjISLV/giphy.gif
 
