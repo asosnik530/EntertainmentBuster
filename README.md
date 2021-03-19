@@ -46,6 +46,12 @@ Our team will communicate via slack. We have also discussed the times that work 
  
  - Limitations and Benefits of Model Choice:We considered the possibility that our machine learning model could be an unsupervised machine learning model, if our growth in ratings variable would be continuous and non-labeled. However, considering the way we further envisioned this growth variable (to be categorical), we decided to go with a supervised machine learning model using logistic regression.
 
+ - Updates on Changes in Our Model (from Segment 2 to Segment 3): To further validate the model, we tested the model on a trial dataset five additional Netflix programs from different genres: “Bridgerton”, “Queer Eye”, “Extraction”, “Molly’s Game”, and “Emily in Paris”. The purpose of this validation was to see if what would our model would predict to have “positive growth” or “no growth”. The model predicted all programs except “Extraction” and “Emily in Paris” to have “positive growth”. 
+
+![image1](resources/table_1.png?raw=true “Title”)
+
+https://media.giphy.com/media/E4Y1RuHzeZD3IjISLV/giphy.gif
+
  - How can this model be finetuned? This model could be finetuned in a number of ways. First, we could consider modifying the date added data. Given that Netflix viewing has undoubtedly increased in the past year due to COVID, we could see how the model fares with programs released before 2020 and programs released after 2020. Also, we could also reconsider which independent variables are included in the machine learning model based on seeing how the current model fares with other streaming programming such as Disney+ and Hulu. Finally, if we had access to user demographics for the viewers, we could further predict if a show would have positive growth or not based on additional variables such as viewer age, gender, and number of years subscribing to the streaming service. 
 
 
@@ -69,7 +75,6 @@ Link to dashboard blueprint on google slides:
 - https://docs.google.com/presentation/d/1dMSXbWPZI7iQ7lK7niY1OKjWJ9ewC3vSaB6phdXrjt0/edit#slide=id.p
 
 Link to tableau dashboards with visualizations: 
-- Public Dashboard #1: https://public.tableau.com/profile/stacy.chandisingh#!/vizhome/NetViz/EBStory?publish=yes
-- Public Dashboard #2: https://public.tableau.com/profile/andie.sosnik#!/vizhome/EntertainmentBusterVisualizations/Story1?publish=yes
+- Public Dashboard #1: https://public.tableau.com/profile/stacy.chandisingh#!/vizhome/NetViz/Story2?publish=yes
 
 
