@@ -36,9 +36,9 @@ Our team will communicate via slack. We have also discussed the times that work 
 
 ## Machine Learning Model: Logistic Regression
 
-<p align = "center">
+
 ![](resources/ml_diagram.png)
-</p>
+
 
  - Data Pre-Processing: For our preprocessing, we first examined the available data. The data available to us included several csv files from Kaggle that contained information on Netflix tv shows and movies, such as title, date released, country that produced the program, IMDB ratings, and genre. The data was cleaned and joined the data to ensure that all listings were Netflix programs and had country names and IMDB ratings as part of their listings, plus other relevant information. Additionally, the data cleaning included modifying the country column (only including one country name for programs that originally listed multiple producing countries) and genre column (combining similar genres under a specific genre). 
  
@@ -51,11 +51,10 @@ Our team will communicate via slack. We have also discussed the times that work 
 
  - Updates on Changes in Our Model (from Segment 2 to Segment 3): To further validate the model, we tested the model on a trial dataset five additional Netflix programs from different genres: “Bridgerton”, “Queer Eye”, “Extraction”, “Molly’s Game”, and “Emily in Paris”. The purpose of this validation was to see if what would our model would predict to have “positive growth” or “no growth”. The model predicted all programs except “Extraction” and “Emily in Paris” to have “positive growth”. 
 
-<p align = "center">
 ![](resources/table.png)
 
 ![](resources/model.gif)
-</p>
+
 
  - How can this model be finetuned? This model could be finetuned in a number of ways. First, we could consider modifying the date added data. Given that Netflix viewing has undoubtedly increased in the past year due to COVID, we could see how the model fares with programs released before 2020 and programs released after 2020. Also, we could also reconsider which independent variables are included in the machine learning model based on seeing how the current model fares with other streaming programming such as Disney+ and Hulu. Finally, if we had access to user demographics for the viewers, we could further predict if a show would have positive growth or not based on additional variables such as viewer age, gender, and number of years subscribing to the streaming service. 
 
@@ -68,15 +67,15 @@ Our team will communicate via slack. We have also discussed the times that work 
 2. Mediocre to Ok: ratings between 4/10 to 6/10
 3. Good to Excellent: ratings between 7/10 to 10/10
 
-<p align = "center">
-![](resources/tv_shows_1.png)
-</p>
+
+![image1](resources/tv_shows_1.png)
+
 
  - The file named “Netflix_Queries.sql” shows the queries used in pgAdmin 4 to create all tables. After all tables were created, they were exported as csv files and saved in the “Data Files” folder for further analysis and visualizations. We also created a connection string using SQLAlchemy to run a query on popular titles based on ratings and genre. The file named “Netflix_Database_Connection.ibynb” shows a breakdown of the connection string. Below is a breakdown of our ERD relationships for our SQL database.
  
-<p align = "center">
+
 ![](resources/ERD_Relationships.png)
-</p>
+
 
 ## Visualizations
 
