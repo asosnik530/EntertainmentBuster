@@ -51,8 +51,9 @@ Our team will communicate via slack. We have also discussed the times that work 
 
 ![image1](resources/table.png?raw=true "Title")
 
+<iframe src="https://giphy.com/embed/4CjqVUPIfyAwnG5VCE" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/4CjqVUPIfyAwnG5VCE">via GIPHY</a></p>
 
-https://media.giphy.com/media/E4Y1RuHzeZD3IjISLV/giphy.gif
+https://media.giphy.com/media/4CjqVUPIfyAwnG5VCE/giphy.gif
 
  - How can this model be finetuned? This model could be finetuned in a number of ways. First, we could consider modifying the date added data. Given that Netflix viewing has undoubtedly increased in the past year due to COVID, we could see how the model fares with programs released before 2020 and programs released after 2020. Also, we could also reconsider which independent variables are included in the machine learning model based on seeing how the current model fares with other streaming programming such as Disney+ and Hulu. Finally, if we had access to user demographics for the viewers, we could further predict if a show would have positive growth or not based on additional variables such as viewer age, gender, and number of years subscribing to the streaming service. 
 
