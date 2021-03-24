@@ -76,6 +76,6 @@ Link to dashboard blueprint on google slides:
 - https://docs.google.com/presentation/d/1dMSXbWPZI7iQ7lK7niY1OKjWJ9ewC3vSaB6phdXrjt0/edit#slide=id.p
 
 Link to tableau dashboards with visualizations: 
-- Public Dashboard: https://public.tableau.com/profile/stacy.chandisingh#!/vizhome/NetViz/Story2?publish=yes
+- Public Dashboard: https://public.tableau.com/profile/stacy.chandisingh#!/vizhome/NetViz/TheFinalStory?publish=yes
 
 
