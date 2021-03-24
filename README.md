@@ -56,6 +56,8 @@ Our team will communicate via slack. We have also discussed the times that work 
 
 ## Database
 
+##### ERD Relationships Diagram:
+
 ![](resources/ERD_Relationships.png)
 
  - A SQL database has been created using Pandas and Postgres with pgAdmin 4. Our database folder within the repo contains the files that created the database connection which stores our static data and connects to the model. Using SQL, 8 new tables were created from the 2 original csv files. These tables were created as a query to show a breakdown of Netflix TV shows and movies based on their ratings and release year. The tables were made using a left join. Each set of TV shows and movies were categorized into 3 subsets based on ratings and then sorted and grouped by release years. Below is an example of the 1st set of TV shows in category 1 and the categories were as follows: 
@@ -66,7 +68,7 @@ Our team will communicate via slack. We have also discussed the times that work 
 
 ![image1](resources/tv_shows_1.png)
 
- - The file named “Netflix_Queries.sql” shows the queries used in pgAdmin 4 to create all tables. After all tables were created, they were exported as csv files and saved in the “Data Files” folder for further analysis and visualizations. We also created a connection string using SQLAlchemy to run a query on popular titles based on ratings and genre. The file named “Netflix_Database_Connection.ibynb” shows a breakdown of the connection string. Below is a breakdown of our ERD relationships for our SQL database.
+ - The file named “Netflix_Queries.sql” shows the queries used in pgAdmin 4 to create all tables. After all tables were created, they were exported as csv files and saved in the “Data Files” folder for further analysis and visualizations. We also created a connection string using SQLAlchemy to run a query on popular titles based on ratings and genre. The file named “Netflix_Database_Connection.ibynb” shows a breakdown of the connection string.
  
 ## Machine Learning Model
 
